@@ -20,8 +20,8 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 自定义的label组件，项目内使用，远程地址：GitHub地址，本地地址：本地地址
                        DESC
-
-  s.homepage         = 'https://github.com/lhp3851/Stack_APP.git'
+  s.swift_version    = '4.0'
+  s.homepage         = 'https://github.com/lhp3851/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Jerry' => 'lhp3851@163.com' }
@@ -37,6 +37,6 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

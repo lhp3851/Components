@@ -1,0 +1,22 @@
+{
+  "name": "Components",
+  "version": "0.1.0",
+  "summary": "自定义的label组件，项目内使用",
+  "description": "自定义的label组件，项目内使用，远程地址：GitHub地址，本地地址：本地地址",
+  "homepage": "https://github.com/lhp3851/Stack_APP.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Jerry": "lhp3851@163.com"
+  },
+  "source": {
+    "git": "https://github.com/lhp3851/Components.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Components/Classes/**/*"
+}
