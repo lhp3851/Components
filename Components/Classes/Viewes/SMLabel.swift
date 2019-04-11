@@ -17,7 +17,7 @@ extension String {
     }
 }
 
-class JeLabel: UILabel {
+class SMLabel: UILabel {
 
     var edgeInsets: UIEdgeInsets? = UIEdgeInsets.init(top: 10, left: 10, bottom: -10, right: 10)
     

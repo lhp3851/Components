@@ -46,6 +46,7 @@
 		658037B8732559B88A9B9C8F /* Pods-Components_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Components_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Components_Example/Pods-Components_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8411725A4EC657EC09DBBBAD /* Pods_Components_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Components_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A7B6B630C1B1A31ADC535C /* Pods-Components_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Components_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Components_Tests/Pods-Components_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BE5325B6225EF252009991A7 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4766900F365106E434BD85 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +84,7 @@
 		3A2D83EC5C451975C79485DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE5325B6225EF252009991A7 /* Components.framework */,
 				8411725A4EC657EC09DBBBAD /* Pods_Components_Example.framework */,
 				246207032FD1E5B1076D7617 /* Pods_Components_Tests.framework */,
 			);
@@ -485,9 +487,21 @@
 			baseConfigurationReference = 658037B8732559B88A9B9C8F /* Pods-Components_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Components/Components.framework/Headers\"/**",
+				);
 				INFOPLIST_FILE = Components/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Components\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -500,8 +514,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Components/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Components\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -512,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 95A7B6B630C1B1A31ADC535C /* Pods-Components_Tests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -533,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A70A60F7643BC32900ECF61 /* Pods-Components_Tests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

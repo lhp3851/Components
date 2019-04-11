@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Components
 
 class ViewController: UIViewController {
 
-//    lazy var contentLabel:JeLabel = {}()
+//    lazy var contentLabel:SMLabel = {
+//        let temp = SMLabel()
+//        return temp
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

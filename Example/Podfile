@@ -1,3 +1,7 @@
+source 'https://github.com/lhp3851/Stack_APP.git'
+#https://github.com/lhp3851/Components.git
+#https://github.com/lhp3851/Stack_APP.git
+platform :ios, '9.3.0'
 use_frameworks!
 
 target 'Components_Example' do
