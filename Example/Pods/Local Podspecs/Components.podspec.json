@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "summary": "自定义的label组件，项目内使用",
   "description": "自定义的label组件，项目内使用，远程地址：GitHub地址，本地地址：本地地址",
-  "homepage": "https://github.com/lhp3851/Stack_APP.git",
+  "swift_version": "4.2",
+  "homepage": "https://github.com/lhp3851/",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -18,5 +19,6 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Components/Classes/**/*"
+  "source_files": "Components/Classes/**/*",
+  "frameworks": "UIKit"
 }
