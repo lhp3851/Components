@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 自定义的label组件，项目内使用，远程地址：GitHub地址，本地地址：本地地址
                        DESC
-  s.swift_version    = '4.0'
+  s.swift_version    = '4.2'
   s.homepage         = 'https://github.com/lhp3851/'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
